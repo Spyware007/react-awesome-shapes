@@ -1,6 +1,6 @@
 /** @jsxImportSource theme-ui */
 import React from 'react';
-import { Circle, Donut, CircleGrid, Square, Diamond } from '../lib';
+import { Circle, Donut, CircleGrid, Polygon, Diamond } from '../lib';
 import { downKeyFrame, upKeyFrame } from '../constants/shapes.constant';
 
 export const Shapes = () => {
@@ -31,17 +31,20 @@ export const Shapes = () => {
         sx={{ animation: `${downKeyFrame} 6s ease-in-out infinite alternate` }}
         top={['300px', '300px', '360px', '360px']}
       />
-      <Square
+      <Polygon
         color="linear-gradient(135deg, #93c5fd, #3b82f6)"
+        height="80px"
         left={[`-80px`, `50px`, `60px`, `80px`]}
-        size="80px"
+        sides={4}
         top="280px"
+        width="80px"
       />
 
       <Diamond
         color="linear-gradient(225deg, #fed7aa, #fb923c)"
         right={[`40px`, `50px`, `60px`, `120px`]}
         size="30px"
+        sx={{ animation: `${upKeyFrame} 6s ease-in-out infinite alternate` }}
         top="100px"
       />
 

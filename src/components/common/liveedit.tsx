@@ -4,15 +4,12 @@ import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import * as polished from 'polished';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
-// import codeTheme from 'prism-react-renderer/themes/github';
-
-// const background = '#42374a';
-const foreground = '#f8f8f2';
-const red = '#ff5555';
-
-// const blue = polished.lighten(0.1, '#d1b0dd');
-const codeBackground = '#011727';
-const previewBackground = '#eef2ff';
+import {
+  codeBackground,
+  errorBackground,
+  foreground,
+  previewBackground
+} from '../../constants/liveedit.constant';
 
 const StyledProvider = styled(LiveProvider)`
   border-radius: ${polished.rem(3)};
@@ -70,7 +67,7 @@ const StyledPreview = styled(LivePreview)`
 const StyledError = styled(LiveError)`
   display: block;
   padding: ${polished.rem(8)};
-  background: ${red};
+  background: ${errorBackground};
   color: ${foreground};
   white-space: pre-wrap;
   text-align: left;
